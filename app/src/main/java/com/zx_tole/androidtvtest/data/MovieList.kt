@@ -1,4 +1,4 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.data
 
 object MovieList {
     val MOVIE_CATEGORY = arrayOf(

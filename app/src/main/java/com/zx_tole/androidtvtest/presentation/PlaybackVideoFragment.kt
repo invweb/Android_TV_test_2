@@ -1,4 +1,4 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.leanback.app.VideoSupportFragmentGlueHost
 import androidx.leanback.media.MediaPlayerAdapter
 import androidx.leanback.media.PlaybackTransportControlGlue
 import androidx.leanback.widget.PlaybackControlsRow
+import com.zx_tole.androidtvtest.data.Movie
 
 /** Handles video playback with media controls. */
 class PlaybackVideoFragment : VideoSupportFragment() {

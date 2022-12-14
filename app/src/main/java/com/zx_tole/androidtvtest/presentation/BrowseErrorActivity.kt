@@ -1,4 +1,4 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import android.os.Bundle
 import android.os.Handler
@@ -11,6 +11,7 @@ import android.widget.FrameLayout
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import com.zx_tole.androidtvtest.R
 
 /**
  * BrowseErrorActivity shows how to use ErrorFragment.
@@ -58,7 +59,7 @@ class BrowseErrorActivity : FragmentActivity() {
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-        ): View? {
+        ): View {
             val progressBar = ProgressBar(container?.context)
             if (container is FrameLayout) {
                 val layoutParams =

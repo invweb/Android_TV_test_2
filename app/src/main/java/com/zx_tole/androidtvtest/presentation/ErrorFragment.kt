@@ -1,10 +1,11 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import android.os.Bundle
 import android.view.View
 
 import androidx.core.content.ContextCompat
 import androidx.leanback.app.ErrorSupportFragment
+import com.zx_tole.androidtvtest.R
 
 /**
  * This class demonstrates how to extend [ErrorSupportFragment].

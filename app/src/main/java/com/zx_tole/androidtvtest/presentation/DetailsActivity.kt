@@ -1,7 +1,8 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
+import com.zx_tole.androidtvtest.R
 
 /**
  * Details activity class that loads [VideoDetailsFragment] class.

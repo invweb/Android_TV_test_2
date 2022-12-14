@@ -1,11 +1,12 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.logic
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter
+import com.zx_tole.androidtvtest.data.Movie
 
 class DetailsDescriptionPresenter : AbstractDetailsDescriptionPresenter() {
 
     override fun onBindDescription(
-        viewHolder: AbstractDetailsDescriptionPresenter.ViewHolder,
+        viewHolder: ViewHolder,
         item: Any
     ) {
         val movie = item as Movie

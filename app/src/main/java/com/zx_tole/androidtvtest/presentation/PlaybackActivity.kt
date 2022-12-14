@@ -1,20 +1,17 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 
-/**
- * Loads [MainFragment].
- */
-class MainActivity : FragmentActivity() {
+/** Loads [PlaybackVideoFragment]. */
+class PlaybackActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.main_browse_fragment, MainFragment())
-                .commitNow()
+                .replace(android.R.id.content, PlaybackVideoFragment())
+                .commit()
         }
     }
 }

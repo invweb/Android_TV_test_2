@@ -1,4 +1,4 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.presentation
 
 import java.util.Collections
 import java.util.Timer
@@ -32,8 +32,12 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import com.zx_tole.androidtvtest.logic.CardPresenter
+import com.zx_tole.androidtvtest.R
+import com.zx_tole.androidtvtest.data.Movie
+import com.zx_tole.androidtvtest.data.MovieList
 
 /**
  * Loads a grid of cards with movies to browse.
@@ -177,13 +181,17 @@ class MainFragment : BrowseSupportFragment() {
             .load(uri)
             .centerCrop()
             .error(mDefaultBackground)
-            .into<SimpleTarget<Drawable>>(
-                object : SimpleTarget<Drawable>(width, height) {
+            .into<CustomTarget<Drawable>>(
+                object : CustomTarget<Drawable>(width, height) {
                     override fun onResourceReady(
                         drawable: Drawable,
                         transition: Transition<in Drawable>?
                     ) {
                         mBackgroundManager.drawable = drawable
+                    }
+
+                    override fun onLoadCleared(placeholder: Drawable?) {
+
                     }
                 })
         mBackgroundTimer?.cancel()

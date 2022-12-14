@@ -1,4 +1,4 @@
-package com.zx_tole.androidtvtest
+package com.zx_tole.androidtvtest.data
 
 import java.io.Serializable
 
