@@ -10,12 +10,12 @@ object MovieList {
         "Category Five"
     )
 
-    val list: List<Movie> by lazy {
+    val list: ArrayList<Movie> by lazy {
         setupMovies()
     }
     private var count: Long = 0
 
-    private fun setupMovies(): List<Movie> {
+    private fun setupMovies(): ArrayList<Movie> {
         val title = arrayOf(
             "Zeitgeist 2010_ Year in Review",
             "Google Demo Slam_ 20ft Search",
@@ -70,7 +70,9 @@ object MovieList {
             )
         }
 
-        return list
+        val arrayList = ArrayList<Movie>()
+        arrayList.addAll(list)
+        return arrayList
     }
 
     private fun buildMovieInfo(

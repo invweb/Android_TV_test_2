@@ -99,7 +99,7 @@ class MainFragment : BrowseSupportFragment() {
 
         for (i in 0 until NUM_ROWS) {
             if (i != 0) {
-                Collections.shuffle(list)
+                list.shuffle()
             }
             val listRowAdapter = ArrayObjectAdapter(cardPresenter)
             for (j in 0 until NUM_COLS) {
